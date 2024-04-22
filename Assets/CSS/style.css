@@ -110,3 +110,50 @@ header button:hover {
   background-color: var(--couleur-principale);
   color: black;
 }
+/* about us */
+.about_us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-block: 40px;
+  gap: 30vh;
+  width: 100%;
+}
+.text_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+}
+.text_about span {
+  font-weight: bold;
+}
+.palmares {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.trophy,
+.members {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  gap: 10px;
+}
+.palmares span {
+  font-weight: bold;
+  font-size: xx-large;
+}
+.palmares img {
+  height: 10vh;
+  width: 10vh;
+  object-fit: cover;
+}
+.picture_about img {
+  width: 80vh;
+  height: 50vh;
+  object-fit: cover;
+}
