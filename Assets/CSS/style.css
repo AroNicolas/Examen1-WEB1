@@ -341,11 +341,14 @@ h2 {
   opacity: 0;
   transition: opacity 0.5s ease;
   color: white;
-  transform: translate(-15%, 110%);
+  transform: translate(-17%, 100%);
   font-size: large;
+  cursor: pointer;
 }
-.fa-circle-plus {
-  font-size: xx-large;
+.more img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 #image6:hover .more p {
   opacity: 1;
