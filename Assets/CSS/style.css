@@ -353,3 +353,93 @@ h2 {
 #image6:hover .more p {
   opacity: 1;
 }
+
+/* register */
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sign_up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
+  border: 3px solid black;
+  box-shadow: 2px 2px 5px black;
+  background: linear-gradient(
+    to bottom,
+    var(--couleur-principale),
+    #e6c843 /*#b87333*/
+  );
+  border-radius: 10px;
+  margin-block: 10px;
+  padding: 15px 40px;
+  height: 80vh;
+  width: 80vh;
+  gap: 3px;
+}
+.information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.gender img {
+  margin-right: 10px;
+}
+.gender label {
+  font-size: medium;
+  font-weight: bold;
+}
+form input {
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  outline: none;
+  color: black;
+}
+input {
+  width: 60%;
+}
+#date {
+  width: 40%;
+}
+input::placeholder {
+  color: rgb(43, 39, 39);
+  font-style: italic;
+  font-weight: normal;
+}
+.registration img {
+  height: 20px !important;
+  width: 20px !important;
+  object-fit: cover;
+}
+select {
+  outline: none;
+}
+form button {
+  border-radius: 10px;
+  padding: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+form button:hover {
+  transform: scale(1.1);
+}
+.sign_up img {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
