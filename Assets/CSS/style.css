@@ -443,3 +443,53 @@ form button:hover {
   width: auto;
   object-fit: cover;
 }
+
+/* sponsor */
+.sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 40px;
+  padding-block: 10px;
+  background-color: var(--couleur-secondaire);
+}
+.sponsor_pic {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+.sponsor_pic_1,
+.sponsor_pic_2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sponsor_pic img {
+  object-fit: cover;
+}
+#adidas {
+  width: 25vh;
+  height: 16.25vh;
+}
+#hyundai {
+  width: 25vh;
+  height: 3.25vh;
+}
+#coca,
+#qatar {
+  width: 25vh;
+  height: 7.5vh;
+}
+#t-mobile {
+  width: 25vh;
+  height: 12.5vh;
+}
