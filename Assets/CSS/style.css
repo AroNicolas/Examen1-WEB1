@@ -10,6 +10,7 @@
   --couleur-principale: #eed202;
   --couleur-secondaire: #abacb1;
 }
+
 /* navbar */
 nav {
   position: fixed;
@@ -17,7 +18,6 @@ nav {
   left: 0;
   background-color: var(--couleur-principale);
   display: auto;
-  flex-basis: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -40,7 +40,7 @@ nav ul {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
+  gap: 15px;
 }
 nav li {
   list-style: none;
@@ -55,6 +55,27 @@ nav a {
 nav a:hover {
   color: white;
 }
+@media screen and (max-width: 580px) {
+  nav a {
+    font-size: small;
+  }
+  nav ul {
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  nav {
+    height: 30px;
+  }
+  nav a {
+    font-size: x-small;
+  }
+  #logo {
+    width: 27px;
+    height: 27px;
+  }
+}
+
 /* home / header */
 #football_screen {
   width: 100%;
@@ -80,7 +101,7 @@ nav a:hover {
   justify-content: space-around;
   gap: 50px;
 }
-.welcome_text {
+h1 {
   font-size: xxx-large;
   font-weight: bold;
 }
@@ -115,6 +136,29 @@ h2 {
   text-underline-offset: 10px;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: xx-large;
+  }
+  .main_text p {
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 625px) {
+  .main_text {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 400px) {
+  header button {
+    width: 130px;
+    height: 45px;
+  }
+  .main_text {
+    left: 0%;
+  }
+}
+
 /* about us */
 .about_us {
   display: flex;
@@ -122,6 +166,7 @@ h2 {
   align-items: center;
   justify-content: space-around;
   margin-block: 40px;
+  padding-inline: 20px;
   gap: 30vh;
   width: 100%;
 }
@@ -162,6 +207,28 @@ h2 {
   height: 50vh;
   object-fit: cover;
 }
+@media screen and (max-width: 1200px) {
+  .about_us {
+    flex-direction: column;
+    gap: 10vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .picture_about img {
+    width: 70vh;
+    height: 40vh;
+  }
+  .text_about {
+    margin-inline: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .picture_about img {
+    width: 40vh;
+    height: 20vh;
+  }
+}
+
 /* coaches */
 .coaches {
   padding-block: 20px;
@@ -228,21 +295,27 @@ h2 {
 }
 .text-back {
   position: absolute;
-  top: 5%;
+  top: 12%;
   left: 10%;
+  font-size: small;
 }
 .coaches_about p {
-  border: 2px solid black;
+  text-decoration: 3px overline underline;
+  text-underline-offset: 7px;
   text-align: center;
-  font-size: medium;
   color: black;
   margin-top: 5px;
-}
-.coaches_about p:hover {
-  font-size: larger;
   font-weight: bold;
-  cursor: pointer;
+  font-size: larger;
+  margin-top: 20px;
 }
+@media screen and (max-width: 900px) {
+  .coaches_about {
+    flex-direction: column;
+    gap: 10vh;
+  }
+}
+
 /* academy programs */
 .program {
   display: flex;
@@ -269,14 +342,18 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
+  padding: 10px;
   box-shadow: 0 0 5px black;
   background-color: var(--couleur-principale);
 }
+.U18 {
+  padding-block: 17px;
+}
 .training_type img {
   width: 46vh;
-  height: 28vh;
+  height: 25vh;
   object-fit: cover;
 }
 .training_type a {
@@ -288,15 +365,37 @@ h2 {
   font-size: large;
   text-decoration: overline;
 }
+@media screen and (max-width: 925px) {
+  .training_type {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  .woman,
+  .U18,
+  .Pro {
+    height: 50vh;
+    width: 35vh;
+  }
+  .training_type img {
+    width: 32vh;
+    height: 20vh;
+  }
+  .training_type p {
+    font-size: small;
+  }
+}
+
 /* gallery */
 .gallery {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-block: 40px;
   padding-block: 25px;
   gap: 20px;
-  padding-left: 10px;
+  padding-left: 15px;
   background-color: var(--couleur-secondaire);
 }
 .gallery_pictures {
@@ -309,6 +408,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50vh;
+  height: 35vh;
 }
 .image img {
   width: 50vh;
@@ -352,6 +453,46 @@ h2 {
 }
 #image6:hover .more p {
   opacity: 1;
+}
+@media screen and (max-width: 1175px) {
+  .gallery {
+    flex-direction: column-reverse;
+    padding-inline: 15px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .image,
+  .image img {
+    width: 35vh;
+    height: 20vh;
+  }
+  .more img {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+  }
+  #image6 {
+    width: 35vh;
+  }
+  .more p {
+    font-size: small;
+    transform: translate(-25%, 70%);
+  }
+}
+@media screen and (max-width: 800px) {
+  .gallery_pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding-inline: 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .gallery_pictures {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* register */
@@ -443,6 +584,34 @@ form button:hover {
   width: auto;
   object-fit: cover;
 }
+@media screen and (max-width: 1000px) {
+  .sign_up {
+    flex-direction: column;
+    gap: 5vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .registration {
+    width: 68vh;
+  }
+  .name,
+  .user_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .registration {
+    width: 40vh;
+  }
+  .sign_up img {
+    height: 60vh;
+  }
+  form {
+    padding-inline: 20px;
+  }
+}
 
 /* sponsor */
 .sponsor {
@@ -493,6 +662,32 @@ form button:hover {
   width: 25vh;
   height: 12.5vh;
 }
+@media screen and (max-width: 660px) {
+  #adidas {
+    width: 18vh;
+    height: 11.75vh;
+  }
+  #hyundai {
+    width: 18vh;
+    height: 2.35vh;
+  }
+  #coca,
+  #qatar {
+    width: 18vh;
+    height: 5.4vh;
+  }
+  #t-mobile {
+    width: 18vh;
+    height: 9vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sponsor_pic_1,
+  .sponsor_pic_2 {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 
 /* footer / contact */
 footer {
@@ -532,4 +727,10 @@ footer img {
 }
 footer img:hover {
   transform: scale(1.2);
+}
+@media screen and (max-width: 950px) {
+  footer {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
